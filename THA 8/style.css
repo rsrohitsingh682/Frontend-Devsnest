@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #ebd4cb;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.movie-screen {
+    width: 481px;
+
+    height: 15px;
+    background-color: #0f0402;
+    border-radius: 12px 12px 0 0;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+}
+.main-area {
+    background-color: #900C3F;
+    width: 90%;
+    height: 82vh;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 5px;
+    padding: 8px;
+    border-radius: 2px;
+}
+
+.seat {
+    height: 100%;
+    border-radius: 2px;
+    background-color: #537E08;
+}
+
+.seat:hover {
+    background-color: #075052c7;
+    opacity: 0.5;
+}
+
+.booked {
+    background-color: #FFC300 ;
+}
