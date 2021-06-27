@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  font-family: "Ubuntu", sans-serif;
+  outline: none;
+}
+
+body {
+  height: 100vh;
+  background-image: linear-gradient(
+    -225deg,
+    #ff3cac 0%,
+    #562b7c 52%,
+    #2b86c5 100%
+  );
+}
+
+body::after {
+  content: "";
+  opacity: 0.1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(8deg);
+  }
+}
+
+.gameContainer {
+  background: #2a334c;
+  border-radius: 4px;
+  padding: 10px 20px 10px 20px;
+  width: 62%;
+  height: 65%;
+  margin: 30px auto 10px auto;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
+  transition: all 2s ease-out;
+  box-shadow: 2px 4px 24px black;
+}
+
+.menuContainer{
+  margin: 60px auto 2px auto;
+  padding: 0px 10px 10px 10px;
+  background: #1C2233;
+  border-radius: 4px;
+  width: 62%;
+  height: 12%;
+  
+  /* display: flex;
+  flex-wrap: wrap; */
+  perspective: 1000px;
+  transition: all 2s ease-out;
+  box-shadow: 2px 4px 24px black;
+}
+
+
+.card {
+  width: 115px;
+  height: 115px;
+  margin: 6px;
+  display: inline-block;
+  background: #282a36;
+  border-left: 1px solid hsl(220, 100%, 50%);
+  border: 5px solid hsl(220, 100%, 50%);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  animation: rainbow 5s infinite alternate;
+  transition: all 0.7s ease-in-out;
+  position: relative;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  cursor: pointer;
+  box-shadow: 3px 4px 22px 2px black;
+}
+
+@keyframes rainbow {
+  0% {
+    border-color: hsla(343, 86%, 62%, 0.3);
+  }
+  100% {
+    border-color: hsla(211, 99%, 40%, 0.3);
+  }
+}
+
+
+.card:active {
+  transform: scale(0.95);
+  transition: transform 0.2s ease-in-out;
+}
+
+.card.flip {
+  transform: rotateY(180deg);
+  cursor: pointer;
+}
+
+.front,
+.back {
+  width: 100%;
+  height: 100%;
+  padding: 6px;
+  margin: 0;
+  transform: rotateY(180deg);
+  background: rgba(117, 8, 161, 0.7);
+  overflow: hidden;
+  position: relative;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+h4 {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 400;
+}
+
+h4 > span {
+  font-family: 'Orbitron', sans-serif;
+  color: white;
+}
+
+.time,
+  .counter {
+    color: #ffbe2e;
+    font-size: 25px;
+    font-weight: 600;
+  }
