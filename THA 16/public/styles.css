@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  font-family: "Ubuntu", sans-serif;
+  outline: none;
+}
+
+.container {
+  padding: 50px 50px 50px 50px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.board {
+  height: 400px;
+  width: 400px;
+}
+
+.meme-img {
+  background: black;
+  padding: 6px 6px 6px 6px;
+  border-radius: 10px;
+  width: 250px;
+  height: 250px;
+  margin: 10px auto 10px auto;
+  perspective: 1000px;
+  transition: all 2s ease-out;
+  box-shadow: 2px 4px 24px black;
+}
